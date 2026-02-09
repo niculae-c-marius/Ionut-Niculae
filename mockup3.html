@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Mockup</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Main Navigation Bar Styles */
+        .navbar-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 15px 40px;
+            border-bottom: 3px solid #003366;
+            position: relative;
+            z-index: 10;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-placeholder {
+            width: 40px;
+            height: 40px;
+            background-color: #003366;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #003366;
+        }
+
+        .contacts-section {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            border-right: 1px solid #ddd;
+            padding-right: 20px;
+        }
+
+        .social-links a {
+            color: #003366;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-item svg {
+            color: #003366;
+        }
+
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Secondary Navigation Bar Styles */
+        .navbar-secondary {
+            background-color: #f0f8fa;
+            padding: 12px 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .secondary-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .secondary-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .secondary-links a:hover {
+            color: #000;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            display: flex;
+            width: 100%;
+            height: 800px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #fff;
+            position: relative;
+        }
+
+        /* Left Bio Pane */
+        .hero-left {
+            width: 30%;
+            height: 100%;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+     
+        }
+
+        .bio-image-container {
+            width: 100%;
+            height: 60%;
+            background-color: #e8e8e8;
+            overflow: hidden;
+        }
+
+        .bio-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+
+        .bio-content {
+            padding: 40px 30px;
+            flex-grow: 1;
+        }
+
+        .bio-title {
+            font-size: 1.8rem;
+            color: #003366;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-left: 4px solid #003366;
+            padding-left: 15px;
+        }
+
+        .bio-description {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* Right Showcase Pane (Grid) */
+        .hero-right {
+            width: 70%;
+            height: 100%;
+            background-color: #000;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 0;
+        }
+
+        .grid-row {
+            display: grid;
+            width: 100%;
+            height: 100%;
+        }
+
+        .row-3 { grid-template-columns: repeat(3, 1fr); }
+        .row-2 { grid-template-columns: repeat(2, 1fr); }
+
+        .grid-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .grid-item-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .grid-item:hover .grid-item-bg {
+            opacity: 1;
+        }
+
+        .grid-text {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+            pointer-events: none;
+            text-align: center; 
+        }
+
+        /* Section Divider Style */
+        .section-divider {
+            height: 60px;
+            background-color: #003366;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .section-divider::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: #fff;
+            opacity: 0.3;
+        }
+
+        /* --- CONTENT SECTION BASE & OVERLAP --- */
+        .content-section {
+            padding: 80px 40px;
+            background-color: #ffffff;
+            max-width: 1100px;
+            margin: -30px auto 40px; /* Overlap divider above */
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .section-header.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        /* Image Grid Styles for Expertise */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .expertise-image-holder {
+            width: 100%;
+            height: 400px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .expertise-image-holder:hover {
+            transform: translateY(-5px);
+        }
+
+        .expertise-image-holder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .expertise-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 51, 102, 0.9));
+            color: white;
+            padding: 20px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Form & Grid specific to Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Animation States */
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 1s cubic-bezier(0.17, 0.55, 0.55, 1);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 1s cubic-bezier(0.17, 0.55, 0.55, 1);
+        }
+
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .active {
+            opacity: 1 !important;
+            transform: translate(0, 0) !important;
+        }
+
+        /* Form Styling */
+        .contact-form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            background-color: #fafafa;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #003366;
+            background-color: #fff;
+        }
+
+        .submit-btn {
+            background-color: #003366;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #00509e;
+        }
+
+        /* Contact Details */
+        .contact-details {
+            background-color: #f0f8fa;
+            padding: 40px;
+            border-radius: 8px;
+            height: 100%;
+        }
+
+        .detail-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .detail-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #003366;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .detail-text h4 {
+            color: #003366;
+            margin-bottom: 5px;
+        }
+
+        .detail-text p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Footer Placeholder */
+        .footer {
+            background-color: #001a33;
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+            margin-top: 60px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .hero-left { width: 40%; }
+            .hero-right { width: 60%; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .expertise-grid { grid-template-columns: 1fr 1fr; }
+            .grid-text { font-size: 1rem;}
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                height: auto;
+            }
+            .hero-left, .hero-right {
+                width: 100%;
+                height: auto;
+            }
+            .hero-right { height: 800px; }
+            .bio-image-container { height: 400px; }
+            .navbar-main { flex-direction: column; gap: 15px; padding: 15px; }
+            .social-links { border-right: none; padding-right: 0; }
+            .content-section { padding: 40px 20px; margin-top: -20px; width: 95%; }
+            .contact-info {display: block;}
+            .social-links svg {width: 32px; height: 32px;}
+            .expertise-grid { grid-template-columns: 1fr; }
+            .expertise-image-holder { height: 300px; }
+            .secondary-links { text-align: center;}
+            .grid-text { font-size: 0.8rem;}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation -->
+    <nav class="navbar-main">
+        <div class="brand-container">
+            <div class="logo-placeholder">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+            </div>
+            <div class="nav-brand">Ionut Niculae</div>
+        </div>
+        <div class="contacts-section">
+            <div class="social-links">
+                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-1 .8-2 1c1.2.8 2 1.2 2 2.2 0 0-1-.4-2-.5A3.4 3.4 0 0 0 14.6 6c-1.9 0-3.5 1.6-3.5 3.5 0 .3 0 .5.1.8-2.9-.1-5.5-1.5-7.2-3.6-.3.5-.5 1.1-.5 1.8 0 1.2.6 2.3 1.5 2.9-.6 0-1.1-.2-1.6-.4-.1 1.7 1.1 3.2 2.8 3.5-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.4 1.8 2.5 3.4 2.5a6.9 6.9 0 0 1-4.3 1.5c-.3 0-.6 0-.8-.1a9.9 9.9 0 0 0 5.4 1.6c6.5 0 10-5.4 10-10V9.1c.7-.5 1.2-1.1 1.7-1.8z"></path></svg></a>
+                <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <a href="tel:+1234567890">+40 734 567 890</a>
+                </div>
+                <div class="contact-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <a href="mailto:info@example.com">info@domain.com</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Secondary Navigation -->
+    <nav class="navbar-secondary">
+        <ul class="secondary-links">
+            <li><a href="#">Devino broker de asigurari</a></li>
+            <li><a href="#contact">Solicită o ofertă de asigurare</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="bio-image-container">
+                <img src="https://cdn.pixabay.com/photo/2020/06/29/20/31/man-5354308_1280.png" alt="Founder Portrait">
+            </div>
+            <div class="bio-content">
+                <h2 class="bio-title">Broker</h2>
+                <p class="bio-description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit repudiandae quo itaque? Odio voluptatem sint accusantium facilis maiores nostrum in! Odio nihil reiciendis veritatis facilis aperiam ullam nisi cumque autem.
+                </p>
+            </div>
+        </div>
+        <div class="hero-right" id="showcase-grid">
+            <div class="grid-row row-3">
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">RCA/CASCO</span></div>
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">Sanatate</span></div>
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">Malpraxis</span></div>
+            </div>
+            <div class="grid-row row-2">
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">CMR</span></div>
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">Asigurari firme & transport</span></div>
+            </div>
+            <div class="grid-row row-3">
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1430285561322-7808604715df?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">Locuinta + PAD</span></div>
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">Calatorie</span></div>
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">Raspundere civila</span></div>
+            </div>
+            <div class="grid-row row-2">
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">Credit de nevoi personale</span></div>
+                <div class="grid-item"><div class="grid-item-bg" style="background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80')"></div><span class="grid-text">Pachete turistice</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider for Expertise Section -->
+    <div class="section-divider"></div>
+
+    <!-- Expertise Section -->
+    <section class="content-section">
+        <div class="section-header reveal-up">
+            <h2>RCA / CASCO</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+        </div>
+        <div class="expertise-grid">
+            <div class="expertise-image-holder reveal-up" style="transition-delay: 0.1s;">
+                <img src="https://cdn.pixabay.com/photo/2015/08/13/17/30/womans-legs-887286_1280.jpg" alt="PANE A">
+                <div class="expertise-label">PANE A</div>
+            </div>
+            <div class="expertise-image-holder reveal-up" style="transition-delay: 0.2s;">
+                <img src="https://cdn.pixabay.com/photo/2015/09/09/18/06/family-932245_1280.jpg" alt="PANE B">
+                <div class="expertise-label">PANE B</div>
+            </div>
+            <div class="expertise-image-holder reveal-up" style="transition-delay: 0.3s;">
+                <img src="https://cdn.pixabay.com/photo/2017/01/17/20/06/insurance-1987868_1280.jpg" alt="PANE C">
+                <div class="expertise-label">PANE C</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider for Contact Section -->
+    <div class="section-divider"></div>
+
+    <!-- Contact Section -->
+    <section class="content-section" id="contact">
+        <div class="section-header reveal-up">
+            <h2>Contacteaza-ma</h2>
+            <p>Loooorem iiiiipsum adipisicing elit.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="reveal-left">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nume</label>
+                        <input type="text" id="name" placeholder="Nume Prenume">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresa de email</label>
+                        <input type="email" id="email" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subiect</label>
+                        <input type="text" id="subject" placeholder="Subiect">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesaj</label>
+                        <textarea id="message" rows="5" placeholder="Ce ai nevoie..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Cere oferta</button>
+                </form>
+            </div>
+
+            <div class="reveal-right">
+                <div class="contact-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <div class="detail-text">
+                            <h4>Ore</h4>
+                            <p>Luni - Vineri: 09:00 - 18:00<br>Weekend: 06:00 - 06:30</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <div class="detail-text">
+                            <h4>Telefon</h4>
+                            <p>Telefon 1: +40 739 398 499<br>Telefon 2: +40 739 398 499</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+  <polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+                        </div>
+                        <div class="detail-text">
+                            <h4>Email</h4>
+                            <p>info@email.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Ionut Niculae</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const targets = document.querySelectorAll('.section-header, .reveal-up, .reveal-left, .reveal-right');
+            targets.forEach(t => observer.observe(t));
+        });
+    </script>
+</body>
+</html>
