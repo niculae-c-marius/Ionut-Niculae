@@ -518,6 +518,25 @@ a:visited {
 a {
   text-decoration: none;
 }
+        .brand-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .brand-slogan {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 <body>
@@ -530,7 +549,10 @@ a {
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                 </svg>
             </div> -->
-            <div class="nav-brand">Ionut Niculae</div>
+            <div class="brand-container">
+                <span class="brand-name">Ionut Niculae</span>
+                <span class="brand-slogan">destine broker de asigurare reasigurare</span>
+            </div>
         </div>
         <div class="contacts-section">
             <div class="social-links">
