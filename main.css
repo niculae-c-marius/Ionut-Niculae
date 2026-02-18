@@ -314,6 +314,7 @@ body {
     background-color: white;
     text-align: center;
     padding: 12px;
+    font-size: 1.3em;
     border-top: 2px dashed #003366;
     border-bottom: 2px dashed #003366;
 }
@@ -325,6 +326,100 @@ body {
     background-position: center;
 }
 
+#hero-recruitment div:last-of-type p {
+    font-size: 1em;
+    color: #36447A;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    background-color: rgba(240, 248, 250, 0.89);
+    padding: 25px 30px 40px 30px;
+}
+
+#hero-recruitment div:last-of-type p:last-of-type {
+    text-align: center;
+    padding: 5px 30px 10px 30px;
+}
+
+#hero-recruitment div:last-of-type h3 {
+    font-size: 1.3em;
+    color: #003366;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    background-color: rgba(240, 248, 250, 0.89);
+    padding: 10px 
+}
+
+/* RECRUITMENT BUTTON START */
+
+#recruitment-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 2.5rem;
+    min-width: 200px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+            
+    background: rgba(0, 51, 102, 1);
+    border: 0.5px solid rgba(0, 51, 102, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+            
+    /* ANIMATION */
+    transition: 
+        background 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+        border 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+        transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+        letter-spacing 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+        box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#recruitment-button:hover {
+    background: rgba(0, 51, 102, 0.5);
+    border-color: rgba(0, 51, 102, 0.6);
+    transform: translateY(-4px) scale(1.01);
+    letter-spacing: 0.3em;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+#recruitment-button:active {
+    transform: translateY(-1px) scale(0.97);
+    background: rgba(0, 51, 102, 0.15);
+    transition: transform 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* GLINT */
+#recruitment-button::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(0, 51, 102, 0.2);
+    transform: rotate(30deg);
+    pointer-events: none;
+}
+
+#recruitment-button:hover::after {
+    left: 140%;
+    transition: all 0.7s cubic-bezier(0.3, 1, 0.5, 1);
+}
+
+/* RECRUITMENT BUTTON END */
 
 #hero-recruitment div:first-of-type span, #hero-recruitment div:nth-child(4) span {
     color: #F7C40D;
