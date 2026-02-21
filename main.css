@@ -152,7 +152,7 @@ body {
 
 /* BIO END */
 
-/* HERO PRIMARY NAVIGATION START */
+/* PRIMARY NAVIGATION START */
 
 #hero-nav-primary ul {
     grid-column: 2 / span 1;
@@ -238,7 +238,7 @@ body {
     padding: 50px 0px;
 }
 
-/* HERO PRIMARY NAVIGATION END */
+/* PRIMARY NAVIGATION END */
 
 /* RECRUITMENT START */
 
@@ -261,7 +261,6 @@ body {
 #hero-recruitment h2 {
     font-size: 1.2em;
     padding-bottom: 10px;
-    
 }
 
 #hero-recruitment div {
@@ -309,10 +308,10 @@ body {
 }
 
 #hero-recruitment div:last-of-type p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #36447A;
-    line-height: 1.5;
-    letter-spacing: 2px;
+    line-height: 1.3em;
+    letter-spacing: 0.1em;
     background-color: rgba(240, 248, 250, 0.89);
     padding: 25px 30px 40px 30px;
 }
@@ -519,7 +518,7 @@ body {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
     text-align: center;
-    
+    padding-bottom: 20px;
 }
 
 #contact div:first-of-type {
@@ -538,7 +537,7 @@ body {
 
 #contact div:nth-of-type(2), #contact div:nth-of-type(3), #contact div:nth-of-type(4) {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.2em;
     letter-spacing: 0.1em;
     line-height: 1.3em;
     padding: 40px 20px;
@@ -592,21 +591,52 @@ body {
 #rca-casco {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-image: url("https://cdn.pixabay.com/photo/2022/08/29/05/14/car-accident-7418020_1280.png");
+    background-size: cover;
+    background-position: bottom;
 }
 
 #rca-casco h1 {
     grid-column: 1 / span 2;
-    border:1px solid red;
+    font-weight: 700;
+    font-size: 4em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid red;
+}
+
+#rca-casco h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #003366;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+#rca-casco article:first-of-type, #rca-casco article:last-of-type {
+    font-size: 1em;
+    color: #36447A;
+    line-height: 1.5;
+    letter-spacing: 0.2em;
+    background-color: rgba(240, 248, 250, 0.89);
+    padding: 25px 30px 40px 30px; 
 }
 
 #rca-casco article:first-of-type {
     grid-column: 1 / span 1;
-    border:1px solid red;
+    margin: 30px 35px 5px 10px;
 }
 
 #rca-casco article:last-of-type {
     grid-column: 2 / span 1;
-    border:1px solid red;
+    margin: 30px 10px 5px 35px;
 }
 
 /* RCA END */
+
+/* ASIGURARE MEDICALA */
+
+#asigurare-medicala {
+    display: grid;
+}
+
+/* ASIGURARE MEDICALA END */
