@@ -116,8 +116,8 @@ body {
 
 #hero {
     display: grid;
-    grid-template-columns: 600px 1fr;
-    grid-template-rows: 40% 1fr;
+    grid-template-columns: 40vw 1fr;
+    grid-template-rows: 50vh 1fr;
 }
 
 /* BIO START */
@@ -125,6 +125,7 @@ body {
     background-color: #fbfbfb;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
+    border-bottom: 3px dashed #003366;
 }
 
 #hero-bio div {
@@ -144,8 +145,8 @@ body {
 }
 
 #hero-bio img {
-    width: 600px;
-    height: 400px;
+    width: 40vw;
+    height: 500px;
     object-fit: cover;
     object-position: top;
 }
@@ -178,39 +179,33 @@ body {
     grid-row: 1 / span 2;
 }
 
-#hero-nav-primary ul li:first-of-type, #hero-nav-primary ul li:last-of-type,
-#hero-nav-primary ul li:nth-of-type(2), #hero-nav-primary ul li:nth-of-type(3),
-#hero-nav-primary ul li:nth-of-type(4), #hero-nav-primary ul li:nth-of-type(5) {
+.tint-nav-primary {
     position: relative;
     overflow: hidden;
 }
 
-#hero-nav-primary ul li:first-of-type::before, #hero-nav-primary ul li:last-of-type::before,
-#hero-nav-primary ul li:nth-of-type(2)::before, #hero-nav-primary ul li:nth-of-type(3)::before,
-#hero-nav-primary ul li:nth-of-type(4)::before, #hero-nav-primary ul li:nth-of-type(5)::before {
+.tint-nav-primary::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
     background-size: cover;
     background-position: center;
     z-index: -1;
     transition: background-color 0.3s ease, transform 0.4s ease;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: multiply;
 }
 
-#hero-nav-primary ul li:first-of-type:hover::before, #hero-nav-primary ul li:last-of-type:hover::before,
-#hero-nav-primary ul li:nth-of-type(2):hover::before, #hero-nav-primary ul li:nth-of-type(3):hover::before,
-#hero-nav-primary ul li:nth-of-type(4):hover::before, #hero-nav-primary ul li:nth-of-type(5):hover::before {
+.tint-nav-primary:hover::before {
     transform: scale(1.1);
     background-color: rgba(0, 0, 0, 0);
 }
 
 #hero-nav-primary ul li:first-of-type::before {
-    background-image: url("https://images.unsplash.com/photo-1706589271043-e6e233c9057d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://cdn.pixabay.com/photo/2022/01/26/17/07/renault-6969346_1280.jpg");
 }
 
 #hero-nav-primary ul li:last-of-type::before {
@@ -235,21 +230,14 @@ body {
 
 #hero-nav-primary ul li a {
     color: white;
-    font-size: 1.2em;
-    font-weight: 700;
+    font-size: 1.1em;
     text-transform: uppercase;
     text-decoration: none;
+    letter-spacing: 0.2em;
+    line-height: 1.4em;
+    font-weight: 500;
     padding: 50px 0px;
 }
-
-#hero-nav-primary ul li:first-of-type a {
-    padding: 140px 50px;
-}
-
-#hero-nav-primary ul li:last-of-type a {
-    padding: 140px 0px;
-}
-
 
 /* HERO PRIMARY NAVIGATION END */
 
@@ -267,7 +255,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto 1fr;
-    /* border-top: 4px solid #F7C40D; */
 }
 
 #hero-recruitment h3 {
@@ -430,9 +417,100 @@ body {
 
 /* HERO SECONDARY NAVIGATION START */
 
+#hero-nav-secondary div {
+    padding: 15px;
+    background-color: #F0F8FA;
+}
+
 #hero-nav-secondary {
     grid-column: 1 / span 2;
-    /* border: 1px solid red; */
+}
+
+#hero-nav-secondary ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#hero-nav-secondary ul li {
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+}
+
+#hero-nav-secondary ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    line-height: 1.3em;
+    color: white;
+    font-size: 1.8em;
+    font-weight: 700;
+    padding: 20px;
+    
+}
+
+#hero-nav-secondary ul li a p {
+    padding: 40px;
+}
+
+.tint-nav-secondary {
+    position: relative;
+    overflow: hidden;
+}
+
+.tint-nav-secondary::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: background-color 0.3s ease, transform 0.4s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+
+}
+
+.tint-nav-secondary:hover::before {
+    transform: scale(1.4);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+#hero-nav-secondary ul li:first-of-type::before {
+    background-image: url("https://cdn.pixabay.com/photo/2014/12/10/20/48/laboratory-563423_1280.jpg");
+}
+
+#hero-nav-secondary ul li:nth-of-type(2)::before {
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/29/06/49/woman-1867908_1280.jpg");
+}
+
+#hero-nav-secondary ul li:nth-of-type(3)::before {
+    background-image: url("https://cdn.pixabay.com/photo/2021/09/07/11/53/car-6603726_1280.jpg");
+}
+
+#hero-nav-secondary ul li:nth-of-type(4)::before {
+    background-image: url("https://cdn.pixabay.com/photo/2013/12/13/21/13/plumber-228010_1280.jpg");
+}
+
+#hero-nav-secondary ul li:nth-of-type(5)::before {
+    background-image: url("https://cdn.pixabay.com/photo/2018/05/11/23/45/highway-3392100_1280.jpg");
+}
+
+#hero-nav-secondary ul li:nth-of-type(6)::before {
+    background-image: url("https://cdn.pixabay.com/photo/2019/05/05/18/58/girl-4181395_1280.jpg");
+}
+
+#hero-nav-secondary ul li:nth-of-type(7)::before {
+    background-image: url("https://cdn.pixabay.com/photo/2018/10/09/08/20/auto-3734396_1280.jpg");
+}
+
+#hero-nav-secondary ul li:last-of-type::before {
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/27/07/51/solar-panels-2685357_1280.jpg");
 }
 
 /* HERO SECONDARY NAVIGATION END */
