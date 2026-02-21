@@ -125,7 +125,6 @@ body {
     background-color: #fbfbfb;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
-    border-bottom: 3px dashed #003366;
 }
 
 #hero-bio div {
@@ -134,7 +133,7 @@ body {
     padding: 22px;
 }
 
-#hero-bio h2 {
+#hero-bio h1 {
     font-weight: 700;
     font-size: 1.4em;
     text-transform: uppercase;
@@ -243,10 +242,12 @@ body {
 
 /* RECRUITMENT START */
 
-#hero-recruitment h2, #hero-recruitment h3 {
+#hero-recruitment h1, #hero-recruitment h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #003366;
     font-weight: bold;
+    line-height: 1.3em;
+    letter-spacing: 0.1em;
 }
 
 #hero-recruitment {
@@ -257,12 +258,10 @@ body {
     grid-template-rows: auto auto auto 1fr;
 }
 
-#hero-recruitment h3 {
-    font-size: 1.2em;
-}
-
 #hero-recruitment h2 {
+    font-size: 1.2em;
     padding: 20px;
+    
 }
 
 #hero-recruitment div {
@@ -290,10 +289,6 @@ body {
 #hero-recruitment div:nth-of-type(3) {
     grid-column: 2 / span 1;
     background-color: #F0F8FA;
-}
-
-#hero-recruitment div:nth-of-type(2) h3, #hero-recruitment div:nth-of-type(3) h3 {
-    margin-bottom: 15px;
 }
 
 #hero-recruitment div:nth-of-type(4) {
@@ -327,7 +322,7 @@ body {
     padding: 5px 30px 10px 30px;
 }
 
-#hero-recruitment div:last-of-type h3 {
+#hero-recruitment div:last-of-type h2 {
     font-size: 1.3em;
     color: #003366;
     text-align: center;
@@ -408,18 +403,21 @@ body {
 
 /* RECRUITMENT BUTTON END */
 
-#hero-recruitment div:first-of-type span, #hero-recruitment div:nth-child(4) span {
+.highlight {
     color: #F7C40D;
 }
-
 
 /* RECRUITMENT END */
 
 /* HERO SECONDARY NAVIGATION START */
 
 #hero-nav-secondary div {
-    padding: 15px;
+    padding: 20px;
     background-color: #F0F8FA;
+    text-align: center;
+    font-size: 1.2em;
+    color: #003366;
+    border-top: 2px solid #003366;
 }
 
 #hero-nav-secondary {
@@ -447,7 +445,6 @@ body {
     font-size: 1.8em;
     font-weight: 700;
     padding: 20px;
-    
 }
 
 #hero-nav-secondary ul li a p {
@@ -472,14 +469,12 @@ body {
     transition: background-color 0.3s ease, transform 0.4s ease;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
-
 }
 
 .tint-nav-secondary:hover::before {
     transform: scale(1.4);
     background-color: rgba(0, 0, 0, 0);
 }
-
 
 #hero-nav-secondary ul li:first-of-type::before {
     background-image: url("https://cdn.pixabay.com/photo/2014/12/10/20/48/laboratory-563423_1280.jpg");
@@ -516,3 +511,60 @@ body {
 /* HERO SECONDARY NAVIGATION END */
 
 /* HERO SECTION END */
+
+/* CONTACT SECTION */
+
+#contact {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 1fr;
+    text-align: center;
+    
+}
+
+#contact div {
+    padding: 40px;
+}
+
+#contact>div:first-of-type {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    background-color: #F0F8FA;
+    padding: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #003366;
+    font-size: 1.7em;
+    font-weight: bold;
+    line-height: 1.3em;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid #003366;
+}
+
+#contact div:nth-of-type(2) h2 {
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+#contact div:nth-of-type(2) p {
+    font-size: 2em;
+    color: #36447A;
+    letter-spacing: 0.3em;
+    padding: 30px;
+}
+
+#contact div:nth-of-type(2) p svg {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    padding-bottom: 7px;
+    color: black;
+}
+
+#contact div:nth-of-type(2) a svg {
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+}
+
+
+/* CONTACT SECTION END */
