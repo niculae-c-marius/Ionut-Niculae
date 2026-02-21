@@ -517,16 +517,12 @@ body {
 #contact {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto;
     text-align: center;
     
 }
 
-#contact div {
-    padding: 40px;
-}
-
-#contact>div:first-of-type {
+#contact div:first-of-type {
     grid-column: 1 / span 3;
     grid-row: 1 / span 1;
     background-color: #F0F8FA;
@@ -540,30 +536,42 @@ body {
     border-bottom: 2px solid #003366;
 }
 
-#contact div:nth-of-type(2) h2 {
-    font-size: 1.2em;
+#contact div:nth-of-type(2), #contact div:nth-of-type(3), #contact div:nth-of-type(4) {
+    font-size: 1.3em;
+    font-weight: 700;
     letter-spacing: 0.1em;
+    line-height: 1.3em;
+    padding: 40px 20px;
 }
 
-#contact div:nth-of-type(2) p {
-    font-size: 2em;
+#contact div:nth-of-type(5), #contact div:nth-of-type(6), #contact div:nth-of-type(7) {
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
     color: #36447A;
-    letter-spacing: 0.3em;
-    padding: 30px;
 }
 
-#contact div:nth-of-type(2) p svg {
+
+#contact div:nth-of-type(5) p svg, #contact div:nth-of-type(6) p svg {
     width: 32px;
     height: 32px;
     vertical-align: middle;
-    padding-bottom: 7px;
-    color: black;
+    color: #003366;
 }
 
-#contact div:nth-of-type(2) a svg {
-    width: 64px;
-    height: 64px;
-    vertical-align: middle;
+#contact div:nth-of-type(5)>a svg {
+    width: 54px;
+    height: 54px;
+    margin-top: 30px;
+}
+
+#contact div:nth-of-type(7) svg {
+    width: 54px;
+    height: 54px;
+}
+
+#email-copy svg:first-of-type, #email-copy svg:last-of-type, #phone-copy svg:first-of-type, #phone-copy svg:last-of-type {
+    width: 18px !important;
+    height: 18px !important;
 }
 
 /* CONTACT SECTION END */
