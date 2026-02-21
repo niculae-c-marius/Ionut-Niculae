@@ -260,7 +260,7 @@ body {
 
 #hero-recruitment h2 {
     font-size: 1.2em;
-    padding: 20px;
+    padding-bottom: 10px;
     
 }
 
@@ -537,11 +537,19 @@ body {
 }
 
 #contact div:nth-of-type(2), #contact div:nth-of-type(3), #contact div:nth-of-type(4) {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.3em;
-    font-weight: 700;
     letter-spacing: 0.1em;
     line-height: 1.3em;
     padding: 40px 20px;
+}
+
+#contact div:nth-of-type(5) p a {
+    text-decoration: none;
+}
+
+#contact div:nth-of-type(5) p a, #contact div:nth-of-type(6) p a {
+    text-decoration: none;
 }
 
 #contact div:nth-of-type(5), #contact div:nth-of-type(6), #contact div:nth-of-type(7) {
@@ -551,22 +559,25 @@ body {
 }
 
 
-#contact div:nth-of-type(5) p svg, #contact div:nth-of-type(6) p svg {
+#contact div:nth-of-type(5) p a svg, #contact div:nth-of-type(6) p svg {
     width: 32px;
     height: 32px;
     vertical-align: middle;
     color: #003366;
 }
 
-#contact div:nth-of-type(5)>a svg {
-    width: 54px;
-    height: 54px;
-    margin-top: 30px;
+#contact div:nth-of-type(5) p a svg {
+    margin-right: 20px;
+}
+
+#contact div:nth-of-type(6) p svg {
+    margin-right: 20px;
 }
 
 #contact div:nth-of-type(7) svg {
-    width: 54px;
-    height: 54px;
+    width: 32px;
+    height: 32px;
+    margin: 0px 10px;
 }
 
 #email-copy svg:first-of-type, #email-copy svg:last-of-type, #phone-copy svg:first-of-type, #phone-copy svg:last-of-type {
@@ -575,3 +586,27 @@ body {
 }
 
 /* CONTACT SECTION END */
+
+/* RCA CASCO START */
+
+#rca-casco {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#rca-casco h1 {
+    grid-column: 1 / span 2;
+    border:1px solid red;
+}
+
+#rca-casco article:first-of-type {
+    grid-column: 1 / span 1;
+    border:1px solid red;
+}
+
+#rca-casco article:last-of-type {
+    grid-column: 2 / span 1;
+    border:1px solid red;
+}
+
+/* RCA END */
