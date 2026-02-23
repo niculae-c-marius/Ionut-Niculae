@@ -598,25 +598,26 @@ h1, h2, h3 {
     grid-template-columns: 1fr 1fr;
     background-size: cover;
     background-position: center;
-    padding: 10px 200px;
     text-wrap: pretty;
 }
 
 .product-a h1 {
     grid-column: 1 / span 2;
-    font-size: 4em;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    background-color: #F0F8FA;
+    padding: 25px;
+    color: #003366;
+    font-size: 2.8em;
+    font-weight: bold;
+    line-height: 1.3em;
+    letter-spacing: 0.1em;
     text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px 0px;
-    /* border-bottom: 2px dashed #003366; */
+    border-top: 2px dashed #003366;
+    border-bottom: 2px solid #003366;
 }
 
 .product-a h2 {
     color: #F7C40D;
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: bold;
     line-height: 1.3em;
 }
@@ -627,15 +628,22 @@ h1, h2, h3 {
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 30px;
+    
 }
 
 .product-a article:first-of-type {
     grid-column: 1 / span 1;
     border-right: 2px dashed white;
+    margin-left: 200px;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 .product-a article:last-of-type {
     grid-column: 2 / span 1;
+    margin-right: 200px;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 /* PRODUCT SECTION TYPE A END */
@@ -644,27 +652,100 @@ h1, h2, h3 {
 
 .product-b {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 20% 1fr 20%;
+    color: white;
+    line-height: 1.3em;
+    letter-spacing: 0.1em;
+    background-color: #003366;
+    text-wrap: pretty;
 }
 
 .product-b h1 {
     grid-column: 1 / span 3;
+     background-color: #F0F8FA;
+    padding: 45px;
+    color: #003366;
+    font-size: 2.8em;
+    font-weight: bold;
+    text-align: center;
+    border-top: 2px solid #003366;
 }
 
-.product-b article:last-of-type {
-    grid-column: 1 / span 3;
+.product-b h2 {
+    font-family: "Aboreto";
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.4em;
+    text-align: center;
+    color: #F7C40D;
+    margin-top: 20px;
 }
+.product-b div:first-of-type, .product-b div:last-of-type {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.product-b article {
+    padding: 40px;
+}
+
 
 /* PRODUCT SECTION TYPE B END */
 
 /* PRODUCT SECTION TYPE C */
 
 .product-c {
+    display: grid;
+    text-align: center;
+    padding: 60px 30px 20px 30px;
+    height: 80vh;
+    background-size:cover;
+    background-position: top;
+    line-height: 1.3em;
+    letter-spacing: 0.1em;
+}
 
+.product-c h1 {
+    font-size: 4em;
+    font-family: "Aboreto";
+    color: white;
+}
+
+.product-c h2 {
+    color: #F7C40D;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+.product-c article {
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 100px;
+    color: white;
 }
 
 /* PRODUCT SECTION TYPE C END */
 
 #rca-casco {
     background-image: url("https://cdn.pixabay.com/photo/2018/01/18/20/56/auto-3091234_1280.jpg");
+}
+
+#asigurare-medicala {
+    background-image: url("https://cdn.pixabay.com/photo/2022/06/15/09/50/health-insurance-7263536_1280.png");
+}
+
+#credite-left {
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/01/09/52/people-2564100_1280.jpg");
+    background-position: right;
+}
+
+#credite-right {
+    background-image: url("https://cdn.pixabay.com/photo/2019/10/05/08/53/shop-4527402_1280.jpg");
+}
+
+#asigurare-viata {
+    background-image: url("https://cdn.pixabay.com/photo/2021/02/10/16/07/family-6002642_1280.jpg");
 }
