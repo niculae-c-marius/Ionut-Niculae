@@ -1087,8 +1087,8 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
     }
 
     #contact svg {
-        width: 64px !important;
-        height: 64px !important;
+        width: 54px !important;
+        height: 54px !important;
     }
 
     #contact div:nth-of-type(2) {
@@ -1099,7 +1099,7 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
     #contact div:nth-of-type(5) {
         grid-column: 1 / -1;
         grid-row: 3;
-        font-size: 4em !important;
+        font-size: 3em !important;
         margin-bottom: 30px;
     }
 
@@ -1111,7 +1111,7 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
     #contact div:nth-of-type(6) {
         grid-column: 1 / -1;
         grid-row: 5;
-        font-size: 2em !important;
+        font-size: 1.7em !important;
         margin-bottom: 30px;
     }
 
