@@ -293,7 +293,6 @@ h1, h2, h3 {
 
 #hero-recruitment h2 {
     font-size: 1.2em;
-    padding-bottom: 10px;
 }
 
 #hero-recruitment div {
@@ -629,12 +628,10 @@ h1, h2, h3 {
     grid-template-columns: 1fr 1fr;
     background-size: cover;
     background-position: center;
-    height: 1000px;
 }
 
 .product-a h1 {
     grid-column: 1 / span 2;
-    height: 25%;
     background-color: #F0F8FA;
     padding: 25px;
     color: #003366;
@@ -749,7 +746,7 @@ h1, h2, h3 {
     font-size: 2em;
     font-weight: bold;
     line-height: 1.4em;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .product-c article {
@@ -1029,6 +1026,7 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
 
     .product-a, .product-b, .product-c {
         display: block;
+        height: auto;
     }
 
     .product-a h1, .product-b h1, .product-c h1 {
@@ -1037,6 +1035,7 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
 
     .product-c h1 {
         font-size: 1.8em;
+        margin-bottom: 20px;
     }
 
     .product-c h2 {
@@ -1050,12 +1049,22 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
         border: none !important;
     }
 
+    .product-c article {
+        height: 100%;
+        padding: 20px !important;
+        margin: 0px !important;
+    }
+
     footer nav {
         display: block;
     }
 
     footer nav ul {
         margin: 30px;
+    }
+
+    #panouri-right, #asistenta-right, #daune-right, #calatorie-right, #imm-right, #turistice-right, #civila-right, #malpraxis-right, #cmr-right {
+        display: none;
     }
 }
 
@@ -1243,6 +1252,10 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
 
     .product-c article {
         padding: 10px !important;
+    }
+
+    .product-a h1, .product-b h1, .product-c h1 {
+        font-size: 1.2em;
     }
 
 }
