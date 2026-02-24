@@ -548,14 +548,13 @@ h1, h2, h3 {
 #contact {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
     text-align: center;
     padding-bottom: 100px;
     max-width: 100vw;
     align-items: center;
 }
 
-#contact div:first-of-type {
+#contact>div:first-of-type {
     grid-column: 1 / span 3;
     grid-row: 1 / span 1;
     background-color: #F0F8FA;
@@ -566,6 +565,10 @@ h1, h2, h3 {
     line-height: 1.3em;
     letter-spacing: 0.1em;
     border-bottom: 2px solid #003366;
+}
+
+#contact a {
+    color: black !important;
 }
 
 #contact div:nth-of-type(2), #contact div:nth-of-type(3), #contact div:nth-of-type(4) {
@@ -585,15 +588,12 @@ h1, h2, h3 {
 #contact div:nth-of-type(5), #contact div:nth-of-type(6), #contact div:nth-of-type(7) {
     font-family: "Aboreto";
     font-size: 1.5em;
-    color: #36447A;
 }
-
 
 #contact div:nth-of-type(5) p a svg, #contact div:nth-of-type(6) p svg {
     width: 32px;
     height: 32px;
     vertical-align: middle;
-    color: #003366;
 }
 
 #contact div:nth-of-type(5) p a svg {
@@ -610,13 +610,17 @@ h1, h2, h3 {
     margin: 0px 10px;
 }
 
-#email-copy svg:first-of-type, #email-copy svg:last-of-type, #phone-copy svg:first-of-type, #phone-copy svg:last-of-type {
+/* #email-copy svg:first-of-type, #email-copy svg:last-of-type, #phone-copy svg:first-of-type, #phone-copy svg:last-of-type {
     width: 18px !important;
     height: 18px !important;
 }
 
 #email-copy:hover {
     cursor: pointer;
+} */
+
+#contact div:last-of-type {
+    grid-column: 1 / -1;
 }
 
 /* CONTACT SECTION END */
@@ -1142,10 +1146,6 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
         margin-bottom: 30px;
     }
 
-    #phone-copy, #email-copy {
-        display: none;
-    }
-
     #contact div:nth-of-type(6) p svg {
         display: none;
     }
@@ -1366,3 +1366,9 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
 }
 
 /* MATERIALISE END */
+
+/* CONTACT FORM START */
+
+
+
+/* CONTACT FORM END */
