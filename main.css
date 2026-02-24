@@ -1,3 +1,8 @@
+html {
+    scroll-behavior: smooth;
+	scroll-padding-top: 60px;
+}
+
 body {
     font-family: "Google Sans Code";
 }
@@ -37,7 +42,6 @@ h1, h2, h3 {
 .brand-name {
     display: block;
     font-size: 2em;
-    font-weight: bold;
 }
 
 .brand-slogan {
@@ -103,6 +107,11 @@ h1, h2, h3 {
 #nav-primary {
     padding: 15px;
     background-color: #F0F8FA;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 #nav-primary ul {
@@ -164,6 +173,7 @@ h1, h2, h3 {
     height: 500px;
     object-fit: cover;
     object-position: top;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* BIO END */
@@ -188,6 +198,12 @@ h1, h2, h3 {
     grid-column: 1/ span 1;
     grid-row: 1 / span 2;
 }
+
+#hero-nav-primary ul li:first-of-type a, #hero-nav-primary ul li:last-of-type a {
+    padding: 100px 10px;
+}
+
+
 
 #hero-nav-primary ul li:last-of-type {
     grid-column: 4 / span 1;
@@ -272,6 +288,7 @@ h1, h2, h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto 1fr;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 #hero-recruitment h2 {
@@ -433,6 +450,7 @@ h1, h2, h3 {
     font-size: 1.2em;
     color: #003366;
     border-top: 2px solid #003366;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 #hero-nav-secondary {
@@ -463,10 +481,6 @@ h1, h2, h3 {
     font-size: 1.8em;
     font-weight: 700;
     padding: 20px;
-}
-
-#hero-nav-secondary ul li a p {
-    
 }
 
 .tint-nav-secondary {
@@ -615,10 +629,15 @@ h1, h2, h3 {
     grid-template-columns: 1fr 1fr;
     background-size: cover;
     background-position: center;
+<<<<<<< HEAD
+    height: 1000px;
+=======
+>>>>>>> ad339703e78c9b401012fa26a21cadbff1982a3e
 }
 
 .product-a h1 {
     grid-column: 1 / span 2;
+    height: 25%;
     background-color: #F0F8FA;
     padding: 25px;
     color: #003366;
@@ -629,6 +648,7 @@ h1, h2, h3 {
     text-align: center;
     border-top: 2px dashed #003366;
     border-bottom: 2px solid #003366;
+    align-content: center;
 }
 
 .product-a h2 {
@@ -650,14 +670,12 @@ h1, h2, h3 {
     grid-column: 1 / span 1;
     border-right: 2px dashed white;
     padding-left: 100px;
-    margin-top: 60px;
     margin-bottom: 20px;
 }
 
 .product-a article:last-of-type {
     grid-column: 2 / span 1;
     padding-right: 100px;
-    margin-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -671,17 +689,24 @@ h1, h2, h3 {
     color: white;
     line-height: 1.3em;
     letter-spacing: 0.1em;
+<<<<<<< HEAD
+    background-color: #003366;
+}
+=======
     background-color: #003366;}
+>>>>>>> ad339703e78c9b401012fa26a21cadbff1982a3e
 
 .product-b h1 {
     grid-column: 1 / span 3;
-     background-color: #F0F8FA;
+    background-color: #F0F8FA;
     padding: 45px;
     color: #003366;
     font-size: 2.8em;
     font-weight: bold;
     text-align: center;
     border-top: 2px solid #003366;
+    height: 8%;
+    align-content: center;
 }
 
 .product-b h2 {
@@ -723,6 +748,7 @@ h1, h2, h3 {
     font-size: 4em;
     font-family: "Aboreto";
     color: white;
+    align-content: center;
 }
 
 .product-c h2 {
@@ -749,6 +775,7 @@ h1, h2, h3 {
 
 #asigurare-medicala {
     background-image: url("https://cdn.pixabay.com/photo/2022/06/15/09/50/health-insurance-7263536_1280.png");
+    background-position: top;
 }
 
 #credite-left {
@@ -860,7 +887,7 @@ footer {
 
 footer nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     text-align: center;
     align-items: center;
     padding: 20px;
@@ -875,7 +902,6 @@ footer span {
     background-color: #003366;
     padding: 10px;
     color: white;
-    border-top: 2px dashed #F0F8FA;
 }
 
 /* FOOTER END */
@@ -1263,8 +1289,78 @@ main, body, header, #hero, #brand-banner { width: 100vw; }
     #hero-nav-secondary {
         font-size: 0.5em;
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> ad339703e78c9b401012fa26a21cadbff1982a3e
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #007AFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
 
-/* RESPONSIVENESS END */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 12px solid white;
+    margin-bottom: 4px;
+}
+
+.back-to-top:active {
+    transform: scale(0.9);
+    background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* MATERIALISE START */
+
+.materialise {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    filter: blur(10px);
+    transition: none;
+}
+
+.materialise.in-view {
+    animation: materialiseEffect 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes materialiseEffect {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+        filter: blur(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* MATERIALISE END */
