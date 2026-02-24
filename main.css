@@ -2,9 +2,17 @@ body {
     font-family: "Google Sans Code";
 }
 
+a {
+    text-decoration: none;
+}
+
 h1, h2, h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+#longtextfix {
+    font-size: 0.7em;
+  }
 
 /* TOP BRAND BANNER START */
 
@@ -44,6 +52,7 @@ h1, h2, h3 {
 #brand-contact {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 30px;
 }
 
@@ -128,6 +137,10 @@ h1, h2, h3 {
     background-color: #fbfbfb;
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
+}
+
+#hero-bio p {
+    text-wrap: pretty;
 }
 
 #hero-bio div {
@@ -434,8 +447,10 @@ h1, h2, h3 {
 
 #hero-nav-secondary ul li {
     text-align: center;
+    align-content: center;
     background-position: center;
     background-size: cover;
+    padding: 40px;
 }
 
 #hero-nav-secondary ul li a {
@@ -451,7 +466,7 @@ h1, h2, h3 {
 }
 
 #hero-nav-secondary ul li a p {
-    padding: 40px;
+    
 }
 
 .tint-nav-secondary {
@@ -523,6 +538,8 @@ h1, h2, h3 {
     grid-template-rows: auto;
     text-align: center;
     padding-bottom: 100px;
+    max-width: 100vw;
+    align-items: center;
 }
 
 #contact div:first-of-type {
@@ -628,20 +645,19 @@ h1, h2, h3 {
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 30px;
-    
 }
 
 .product-a article:first-of-type {
     grid-column: 1 / span 1;
     border-right: 2px dashed white;
-    margin-left: 200px;
+    padding-left: 100px;
     margin-top: 60px;
     margin-bottom: 20px;
 }
 
 .product-a article:last-of-type {
     grid-column: 2 / span 1;
-    margin-right: 200px;
+    padding-right: 100px;
     margin-top: 60px;
     margin-bottom: 20px;
 }
@@ -717,13 +733,14 @@ h1, h2, h3 {
     font-size: 2em;
     font-weight: bold;
     line-height: 1.4em;
+    padding-bottom: 30px;
 }
 
 .product-c article {
     display: grid;
     place-items: center;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 100px;
+    padding: 70px 60px;
     color: white;
 }
 
@@ -746,6 +763,492 @@ h1, h2, h3 {
     background-image: url("https://cdn.pixabay.com/photo/2019/10/05/08/53/shop-4527402_1280.jpg");
 }
 
-#asigurare-viata {
-    background-image: url("https://cdn.pixabay.com/photo/2021/02/10/16/07/family-6002642_1280.jpg");
+#pad {
+    background-image: url("https://cdn.pixabay.com/photo/2023/04/14/08/47/window-7924525_1280.jpg");
 }
+
+#viata {
+    background-image: url("http://cdn.pixabay.com/photo/2022/08/01/12/24/people-7358064_1280.jpg");
+    background-position: bottom;
+}
+
+#civila-left {
+    background-image: url("https://cdn.pixabay.com/photo/2020/03/18/15/42/right-4944546_1280.jpg");
+    height: 700px;
+}
+
+#civila-right {
+    background-image: url("https://cdn.pixabay.com/photo/2020/12/05/14/08/man-5806013_1280.jpg");
+    height: 700px;
+}
+
+#malpraxis-left {
+    background-image: url("https://cdn.pixabay.com/photo/2014/12/10/21/01/doctor-563429_1280.jpg");
+    height: 500px;
+}
+
+#malpraxis-right {
+    background-image: url("https://cdn.pixabay.com/photo/2019/07/30/15/57/dentist-4373290_1280.jpg");
+    height: 500px;
+}
+
+#cmr-left {
+    background-image: url("https://cdn.pixabay.com/photo/2018/12/05/12/06/container-3857611_1280.jpg");
+    height: 500px;
+}
+
+#cmr-right {
+    background-image: url("https://cdn.pixabay.com/photo/2020/06/10/08/00/truck-5281682_1280.jpg");
+    height: 500px;
+}
+
+#turistice-left {
+    background-image: url("https://cdn.pixabay.com/photo/2021/12/13/07/06/airplane-6867678_1280.jpg");
+}
+
+#turistice-right {
+    background-image: url("https://cdn.pixabay.com/photo/2015/06/19/10/00/beach-814679_1280.jpg");
+}
+
+#imm-left {
+    background-image: url("https://cdn.pixabay.com/photo/2018/03/27/21/43/startup-3267505_1280.jpg");
+}
+
+#imm-right {
+    background-image: url("https://cdn.pixabay.com/photo/2019/05/05/18/58/girl-4181395_1280.jpg");
+}
+
+#calatorie-left {
+    background-image: url("https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg");
+}
+
+#calatorie-right {
+    background-image: url("https://cdn.pixabay.com/photo/2019/07/18/17/36/nature-4346917_1280.jpg");
+}
+
+#daune-left {
+    background-image: url("https://cdn.pixabay.com/photo/2021/05/10/10/19/car-crash-6243099_1280.jpg");
+    background-position: left;
+}
+
+#daune-right {
+    background-image: url("https://cdn.pixabay.com/photo/2016/05/22/18/51/accident-1409013_1280.jpg");
+}
+
+#asistenta-left {
+    background-image: url("https://cdn.pixabay.com/photo/2015/12/07/10/55/electric-1080584_1280.jpg");
+}
+
+#asistenta-right {
+    background-image: url("https://cdn.pixabay.com/photo/2023/09/15/10/17/man-8254503_1280.jpg");
+    background-position: right;
+}
+
+#panouri-left {
+    background-image: url("https://cdn.pixabay.com/photo/2017/11/11/17/05/solar-system-2939551_1280.jpg");
+}
+
+#panouri-right {
+    background-image: url("https://cdn.pixabay.com/photo/2015/01/09/11/26/solar-cells-594166_1280.jpg");
+}
+
+/* FOOTERT START */
+
+footer {
+    display: grid;
+    background-color: #F0F8FA;
+    font-size: 0.9em;
+    border-top: 2px dashed #003366;
+}
+
+footer nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+
+footer nav li {
+    padding: 5px;
+}
+
+footer span {
+    text-align: center;
+    background-color: #003366;
+    padding: 10px;
+    color: white;
+    border-top: 2px dashed #F0F8FA;
+}
+
+/* FOOTER END */
+
+/* RESPONIVENESS START */
+
+/* Standard Laptop/Small Desktop */
+@media screen and (max-width: 1400px) {
+  main { width: 100%;}
+   #hero-nav-primary ul, #hero-nav-secondary ul {
+    font-size: 0.8em;
+  }
+
+}
+main, body, header, #hero, #brand-banner { width: 100vw; }
+/* Tablet Landscape */
+@media screen and (max-width: 1100px) {
+  main { width: 100%; }
+  #hero-nav-primary {
+    font-size: 1.2em;
+    letter-spacing: 0.3em;
+    font-weight: 700;
+  }
+
+  #hero-nav-secondary {
+    font-size: 0.9em;
+  }
+
+  #hero, #hero-bio, #hero-nav-primary, #hero-nav-secondary {
+   display: block !important;
+  }
+
+  .brand-name {
+    font-size: 1.5em;
+  }
+  .brand-slogan {
+    font-size: 0.8em;
+  }
+
+  #brand-contact {
+    display: block;
+    justify-content: center;
+  }
+
+  .contact-social {
+    justify-content: center;
+    margin-bottom: 10px;
+    border: none;
+    padding: 0px;
+  }
+
+  .contact-social svg{
+    width: 28px;
+    height: 28px;
+  }
+
+  #hero-bio p {
+    padding: 10px 40px;
+  }
+
+  #hero-bio h1 {
+    margin-left: 62px;
+  }
+
+  #hero-bio img {
+    display: block;
+    width: 80vw;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #hero-nav-primary ul {
+    height: 400px;
+  }
+
+  #hero-recruitment {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    text-wrap: wrap;
+  }
+
+  #hero-recruitment div:nth-of-type(2), #hero-recruitment div:nth-of-type(3) {
+    display: block;
+    text-align: left;
+    font-size: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+
+  #contact p {
+    font-size: 0.7em;
+  }
+
+}
+
+/* Tablet Portrait */
+@media screen and (max-width: 920px) {
+    #brand-banner {
+        display: block;
+    }
+
+    #brand-wrapper {
+        justify-content: space-between;
+    }
+
+    #brand-contact {
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .contact-social {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .contact-social svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .brand-slogan, .brand-name {
+        padding: 10px 40px
+    }
+
+    .product-a, .product-b, .product-c {
+        display: block;
+    }
+
+    .product-a h1, .product-b h1, .product-c h1 {
+        font-size: 1.5em;
+    }
+
+    .product-c h1 {
+        font-size: 1.8em;
+    }
+
+    .product-c h2 {
+        font-size: 1.3em;
+    }
+
+    .product-a article {
+        font-size: 1em;
+        padding: 20px !important;
+        margin: 0px !important;
+        border: none !important;
+    }
+
+    footer nav {
+        display: block;
+    }
+
+    footer nav ul {
+        margin: 30px;
+    }
+}
+
+/* Smartphone */
+@media screen and (max-width: 580px) {
+
+    .contact-info span:nth-of-type(2) {
+        display: none;
+    }
+
+    .contact-social svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contact-info span {
+        font-size: 1.3em;
+    }
+
+    .contact-info svg {
+        display: none;
+    }
+
+    #hero-nav-primary {
+        font-size: 0.7em;
+    }
+
+    #hero-nav-secondary ul li {
+        height: 200px;
+    }
+
+    #hero-nav-secondary ul li p {
+        padding: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    #hero-nav-secondary ul {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #longtextfix {
+        font-size: 0.8em;
+    }
+
+    #contact div {
+        font-size: 1.5em !important;
+    }
+
+    #contact svg {
+        width: 64px !important;
+        height: 64px !important;
+    }
+
+    #contact div:nth-of-type(2) {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    #contact div:nth-of-type(5) {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        font-size: 4em !important;
+        margin-bottom: 30px;
+    }
+
+    #contact div:nth-of-type(3) {
+        grid-column: 1 / -1;
+        grid-row: 4;
+    }
+
+    #contact div:nth-of-type(6) {
+        grid-column: 1 / -1;
+        grid-row: 5;
+        font-size: 2em !important;
+        margin-bottom: 30px;
+    }
+
+    #phone-copy, #email-copy {
+        display: none;
+    }
+
+    #contact div:nth-of-type(6) p svg {
+        display: none;
+    }
+
+    #contact div:nth-of-type(4) {
+        grid-column: 1 / -1;
+        grid-row: 6;
+    }
+
+    #contact div:nth-of-type(7) {
+        grid-column: 1 / -1;
+        grid-row: 7;
+        font-size: 2em !important;
+    }
+
+    #hero-bio div {
+        padding: 0px;
+    }
+
+    #hero-bio h1 {
+        padding: 10px 15px;
+        margin-left: 42px;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    #hero-recruitment div p {
+        text-wrap: pretty;
+        line-height: 1.2em;
+    }
+
+    #hero-recruitment div:nth-of-type(2) {
+        grid-column: 1 / -1;text-align: center;
+        
+    }
+
+    #hero-recruitment div:nth-of-type(3) {
+        grid-column: 1 / -1;text-align: center;
+    }
+
+    #hero-recruitment h2 {
+        padding: 15px;
+    }
+
+    #hero-nav-primary ul {
+        font-size: 1.3em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    #hero-nav-primary ul li {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    #hero-nav-secondary {
+        font-size: 0.7em;
+    }
+
+    .brand-slogan {
+        font-size: 0.7em;
+    }
+
+    #hero-recruitment div:last-of-type p {
+        font-size: 1em;
+    }
+
+    #hero-nav-secondary p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #brand-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    #brand-wrapper img {
+        margin-top: 20px;
+    }
+
+    .brand-slogan {
+        font-size: 1em;
+    }
+
+    .product-c h1 {
+        font-size: 1.4em;
+    }
+
+    .product-c h2 {
+        font-size: 1em;
+    }
+
+    .product-c {
+        font-size: 1em;
+        height: auto;
+    }
+
+    .product-c article {
+        padding: 10px !important;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+    #contact p {
+        font-size: 0.6em;
+    }
+
+    #hero-nav-secondary ul li {
+        text-align: center;
+        align-content: center;
+        background-position: center;
+        background-size: cover;
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #contact p {
+        font-size: 0.5em;
+    }
+    footer nav ul {
+        margin: 10px !important;
+    }
+}
+
+
+/* RESPONSIVENESS END */
